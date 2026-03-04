@@ -1,0 +1,53 @@
+---
+const faqs = [
+  {
+    question: 'Co jest wliczone w cenę wycieczki?',
+    answer: 'W cenę każdego wyjazdu wliczony jest przejazd komfortowym autokarem, zakwaterowanie w hotelu z prywatną łazienką, wyżywienie (śniadania + obiadokolacje, w zależności od lokalizacji), ubezpieczenie, opieka przewodnika oraz imprezy integracyjne.',
+  },
+  {
+    question: 'Jak mogę zarezerwować wycieczkę?',
+    answer: 'Rezerwacja jest bardzo prosta — wystarczy zadzwonić pod numer 793 705 063 lub 883 005 008, albo odwiedzić nasze biuro na ul. Wrocławskiej 7 w Wieruszowie (poniedziałki 16:00-19:00, środy 11:00-13:00).',
+  },
+  {
+    question: 'Skąd wyjeżdża autokar?',
+    answer: 'Wszystkie wyjazdy startują z Wieruszowa. Dokładne miejsce zbiórki podajemy przy potwierdzeniu rezerwacji.',
+  },
+  {
+    question: 'Czy mogę jechać sam/sama czy tylko w grupie?',
+    answer: 'Oczywiście! Nasze wycieczki są idealne zarówno dla osób podróżujących solo, par, jak i grup znajomych. W trakcie wyjazdu integrujemy się — nigdy nie będziesz sam/sama!',
+  },
+  {
+    question: 'Czy są jakieś ukryte koszty?',
+    answer: 'Nie! Cena, którą widzisz, to cena za cały pakiet — przejazd, hotel, wyżywienie, ubezpieczenie i atrakcje. Jedyne dodatkowe koszty to ewentualne wycieczki fakultatywne, które są całkowicie dobrowolne.',
+  },
+  {
+    question: 'Jakie dokumenty potrzebuję na wyjazd?',
+    answer: 'Na wyjazdy po Polsce wystarczy dowód osobisty. Na wyjazd do Budapesztu potrzebny jest dowód osobisty lub paszport (oba kraje są w strefie Schengen).',
+  },
+  {
+    question: 'Czy mogę zrezygnować z wycieczki?',
+    answer: 'Tak, rezygnacja jest możliwa. Szczegółowe warunki rezygnacji i zwrotów omówimy telefonicznie przy rezerwacji. Zachęcamy do kontaktu — zawsze staramy się znaleźć najlepsze rozwiązanie.',
+  },
+];
+---
+
+<section class="py-16 md:py-24">
+  <div class="max-w-3xl mx-auto px-4">
+    <div class="text-center mb-10 md:mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold text-dark mb-3">Często zadawane pytania</h2>
+    </div>
+    <div class="space-y-3">
+      {faqs.map((faq) => (
+        <details class="group bg-white border border-gray-200 rounded-xl overflow-hidden">
+          <summary class="flex items-center justify-between cursor-pointer p-5 md:p-6 text-lg font-semibold text-dark hover:text-primary transition-colors list-none">
+            {faq.question}
+            <svg class="w-5 h-5 text-dark/40 group-open:rotate-180 transition-transform shrink-0 ml-4" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="6 9 12 15 18 9"/></svg>
+          </summary>
+          <div class="px-5 pb-5 md:px-6 md:pb-6 text-dark/70 leading-relaxed">
+            {faq.answer}
+          </div>
+        </details>
+      ))}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,88 @@
+---
+import Layout from '../layouts/Layout.astro';
+---
+
+<Layout title="Pobierz Przewodnik Turystyczny — TravelPL">
+  <!-- Header -->
+  <section class="py-16 md:py-24 bg-gradient-to-br from-primary to-primary/80 text-white">
+    <div class="max-w-4xl mx-auto px-4 text-center">
+      <h1 class="text-3xl md:text-4xl font-bold mb-6">Pobierz Przewodnik Turystyczny</h1>
+      <p class="text-lg md:text-xl leading-relaxed text-white/90 max-w-2xl mx-auto">
+        Zainstaluj naszą aplikację mobilną — Twojego osobistego przewodnika po atrakcjach turystycznych!
+      </p>
+    </div>
+  </section>
+
+  <!-- App description -->
+  <section class="py-16 md:py-24">
+    <div class="max-w-3xl mx-auto px-4">
+      <div class="text-center mb-12">
+        <p class="text-lg leading-relaxed text-dark/80 mb-8">
+          Znajdziesz w niej mapę, opisy miejsc, nawigację i quiz wiedzy o regionie. Aplikacja jest idealnym towarzyszem podróży — zarówno na naszych wycieczkach, jak i na samodzielnych wyprawach.
+        </p>
+
+        <div class="flex flex-col sm:flex-row items-center justify-center gap-4 mb-8">
+          <a
+            href="#"
+            class="inline-flex items-center justify-center gap-3 bg-dark text-white font-bold text-body px-8 py-4 rounded-xl opacity-60 cursor-not-allowed min-h-touch w-full sm:w-auto"
+            aria-disabled="true"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+            Pobierz na iOS
+          </a>
+          <a
+            href="#"
+            class="inline-flex items-center justify-center gap-3 bg-dark text-white font-bold text-body px-8 py-4 rounded-xl opacity-60 cursor-not-allowed min-h-touch w-full sm:w-auto"
+            aria-disabled="true"
+          >
+            <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M3.609 1.814L13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893l2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199l2.302 2.302a1 1 0 0 1 0 1.38l-1.986 1.15-2.62-2.62 2.304-2.212zM5.864 1.658L16.8 7.99l-2.302 2.302L5.864 1.658z"/></svg>
+            Pobierz na Android
+          </a>
+        </div>
+
+        <div class="inline-block bg-accent/10 text-accent font-semibold px-6 py-3 rounded-xl">
+          Wkrótce dostępna!
+        </div>
+      </div>
+
+      <!-- Notification form -->
+      <div class="bg-light rounded-2xl p-6 md:p-8 max-w-lg mx-auto">
+        <h2 class="text-xl font-bold text-dark mb-2 text-center">Chcesz wiedzieć pierwszy/a?</h2>
+        <p class="text-dark/60 text-center mb-6">
+          Zostaw swój numer — powiadomimy Cię, gdy aplikacja będzie gotowa!
+        </p>
+        <form action="https://formspree.io/f/PLACEHOLDER" method="POST" class="space-y-4">
+          <div>
+            <label for="app-name" class="block text-base font-semibold text-dark mb-2">Imię</label>
+            <input
+              type="text"
+              id="app-name"
+              name="name"
+              required
+              class="w-full px-4 py-3 border border-gray-300 rounded-xl text-body focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+              placeholder="Twoje imię"
+            />
+          </div>
+          <div>
+            <label for="app-phone" class="block text-base font-semibold text-dark mb-2">Telefon</label>
+            <input
+              type="tel"
+              id="app-phone"
+              name="phone"
+              required
+              class="w-full px-4 py-3 border border-gray-300 rounded-xl text-body focus:outline-none focus:ring-2 focus:ring-primary focus:border-transparent"
+              placeholder="Twój numer telefonu"
+            />
+          </div>
+          <input type="hidden" name="_subject" value="Powiadomienie o aplikacji TravelPL" />
+          <button
+            type="submit"
+            class="w-full bg-primary text-white font-bold text-body py-4 rounded-xl hover:bg-primary/90 transition-colors min-h-touch"
+          >
+            Powiadom mnie
+          </button>
+        </form>
+      </div>
+    </div>
+  </section>
+</Layout>
