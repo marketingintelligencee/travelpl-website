@@ -19,6 +19,7 @@ export interface Trip {
   specialAttractions?: string[];
   importantInfo?: string;
   badge?: string;
+  urgencyBadge?: string;
   featured?: boolean;
 }
 
@@ -58,6 +59,7 @@ export const trips: Trip[] = [
       'Dzień 4 — Hel: Przejazd na Półwysep Helski, zwiedzanie Helu, Fokarium, latarnia morska, plaża. Powrót do Wieruszowa',
     ],
     badge: 'Już wkrótce!',
+    urgencyBadge: 'Ostatnie miejsca!',
     featured: true,
   },
   {
@@ -88,6 +90,7 @@ export const trips: Trip[] = [
     ],
     highlights: ['Strefa SPA bez limitu', 'Basen, jacuzzi, sauna', 'Bufet szwedzki', 'Soki bez limitu'],
     badge: 'Już wkrótce!',
+    urgencyBadge: 'Ostatnie miejsca!',
     featured: true,
   },
   {

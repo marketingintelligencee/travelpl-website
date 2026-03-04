@@ -12,8 +12,10 @@ import TripCard from './TripCard.astro';
       </p>
     </div>
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-      {trips.map((trip) => (
-        <TripCard trip={trip} />
+      {trips.map((trip, i) => (
+        <div class="reveal" style={`animation-delay: ${i * 100}ms`}>
+          <TripCard trip={trip} />
+        </div>
       ))}
     </div>
   </div>

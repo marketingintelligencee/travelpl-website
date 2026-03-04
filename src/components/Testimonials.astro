@@ -1,0 +1,67 @@
+---
+const testimonials = [
+  {
+    text: 'Jeżdżę z TravelPL od 3 lat — każda wycieczka to sama przyjemność. Organizacja na medal!',
+    author: 'Elżbieta',
+    location: 'Wieruszów',
+  },
+  {
+    text: 'Nie muszę się o nic martwić. Wsiadam w autokar i mam wakacje z głowy.',
+    author: 'Krzysztof',
+    location: 'Kępno',
+  },
+  {
+    text: 'Byliśmy z żoną w Bieszczadach — piękne widoki, świetny przewodnik i jedzenie rewelacja.',
+    author: 'Marek i Anna',
+    location: '',
+  },
+];
+
+const stats = [
+  { value: '12', label: 'wycieczek w sezonie 2026' },
+  { value: '10+', label: 'lat doświadczenia' },
+  { value: '100%', label: 'wyjazd z Wieruszowa' },
+];
+---
+
+<section class="py-16 md:py-24 bg-sand">
+  <div class="max-w-7xl mx-auto px-4">
+
+    <!-- Stats bar -->
+    <div class="flex flex-col sm:flex-row items-center justify-center gap-6 sm:gap-12 mb-12 md:mb-16">
+      {stats.map((stat) => (
+        <div class="text-center">
+          <div class="text-3xl md:text-4xl font-bold text-primary">{stat.value}</div>
+          <div class="text-base text-dark/60 mt-1">{stat.label}</div>
+        </div>
+      ))}
+    </div>
+
+    <!-- Heading -->
+    <div class="text-center mb-10 md:mb-14">
+      <h2 class="text-2xl md:text-3xl font-bold text-dark mb-3">Co mówią nasi podróżnicy?</h2>
+      <p class="text-lg text-dark/60 max-w-xl mx-auto">
+        Zadowolenie naszych klientów to najlepsza rekomendacja.
+      </p>
+    </div>
+
+    <!-- Testimonials -->
+    <div class="grid grid-cols-1 md:grid-cols-3 gap-6 md:gap-8">
+      {testimonials.map((t) => (
+        <blockquote class="bg-white rounded-2xl p-6 md:p-8 relative shadow-sm">
+          <!-- Quote icon -->
+          <svg class="text-primary/20 mb-4" xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 24 24" fill="currentColor">
+            <path d="M14.017 21v-7.391c0-5.704 3.731-9.57 8.983-10.609l.995 2.151c-2.432.917-3.995 3.638-3.995 5.849h4v10h-9.983zm-14.017 0v-7.391c0-5.704 3.748-9.57 9-10.609l.996 2.151c-2.433.917-3.996 3.638-3.996 5.849h3.983v10h-9.983z" />
+          </svg>
+          <p class="text-dark/80 text-lg leading-relaxed mb-4 italic">
+            „{t.text}"
+          </p>
+          <footer class="font-bold text-dark">
+            — {t.author}{t.location && <span class="font-normal text-dark/50"> z {t.location}</span>}
+          </footer>
+        </blockquote>
+      ))}
+    </div>
+
+  </div>
+</section>
