@@ -49,14 +49,13 @@ export const trips: Trip[] = [
     notIncluded: [
       'Dopłata do pokoju 1-osobowego',
       'Bilety wstępu do zwiedzanych miejsc',
-      'Wycieczki fakultatywne',
     ],
     highlights: ['Gdańsk — Starowka i Bazylika Mariacka', 'Rejs statkiem Gdańsk–Westerplatte', 'Sopot — Monciak i Molo', 'Gdynia — Molo Południowe i Marina'],
     program: [
       'Dzień 1 — Władysławowo: Przyjazd, zakwaterowanie, czas wolny — spacer po mieście, plaża, odpoczynek po podróży',
       'Dzień 2 — Gdańsk: Starówka, Bazylika Mariacka, rejs statkiem na Westerplatte, Tunel Pod Wisłą, Bursztynowy Stadion, Stocznia — miejsce narodzin Solidarności, Oliwa (Archikatedra, Park, Prezentacja Organów)',
       'Dzień 3 — Gdynia i Sopot: Gdynia — Śródmieście, Molo Południowe, Marina. Sopot — Monciak, Molo',
-      'Dzień 4 — Hel: Przejazd na Półwysep Helski, zwiedzanie Helu, Fokarium, latarnia morska, plaża. Powrót do Wieruszowa',
+      'Dzień 4 — Hel: Wykwaterowanie. Przejazd na Półwysep Helski, zwiedzanie Helu, Fokarium, latarnia morska, plaża. Powrót do Wieruszowa',
     ],
     badge: 'Już wkrótce!',
     urgencyBadge: 'Ostatnie miejsca!',
@@ -295,7 +294,7 @@ export const trips: Trip[] = [
     fullDescription: 'Pełne wyżywienie — śniadania, obiady i kolacje! Rowy to kameralna miejscowość z szeroką plażą — tylko 270m od obiektu — i bliskością Słowińskiego Parku Narodowego.',
     included: [
       'Przejazd klimatyzowanym autokarem',
-      'Zakwaterowanie w pokojach z prywatną łazienką (TV, Wi-Fi, lodówka, czajnik, ręczniki, sprzęt plażowy)',
+      'Zakwaterowanie w pokojach z prywatną łazienką (TV, Wi-Fi, lodówka, czajnik, ręczniki)',
       'Pełne wyżywienie: 7x śniadanie + 7x obiad + 7x kolacja',
       'Ubezpieczenie NNW',
       'Opłata klimatyczna',

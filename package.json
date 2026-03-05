@@ -4,6 +4,9 @@
   "version": "1.0.0",
   "scripts": {
     "dev": "astro dev",
+    "build:pwa": "cd ../wieruszow-app && npm run build",
+    "copy:pwa": "rm -rf public/app && cp -r ../wieruszow-app/dist public/app",
+    "build:full": "npm run build:pwa && npm run copy:pwa && astro build",
     "build": "astro build",
     "preview": "astro preview",
     "astro": "astro"
