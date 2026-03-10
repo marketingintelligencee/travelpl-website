@@ -28,7 +28,7 @@ import Layout from '../layouts/Layout.astro';
           <div class="flex flex-col items-center gap-2">
             <a
               id="android-install-btn"
-              href="/app/"
+              href="/app/?install=true"
               class="inline-flex items-center justify-center gap-3 bg-[#3DDC84] text-white font-bold text-lg px-8 py-5 rounded-xl hover:bg-[#35c475] transition-colors shadow-lg"
             >
               <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.226l1.392-2.415a.4.4 0 0 0-.146-.541.393.393 0 0 0-.539.15L16.81 1.853A8.592 8.592 0 0 0 12 .8c-1.72 0-3.328.388-4.81 1.053L5.77-.58a.393.393 0 0 0-.539-.15.4.4 0 0 0-.146.541L6.477 2.226C3.885 3.618 2.1 6.093 1.839 9h20.322c-.261-2.907-2.046-5.382-4.638-6.774zM7.5 6.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm9 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM2 10v9a1 1 0 0 0 1 1h1v3.5a1.5 1.5 0 0 0 3 0V20h2v3.5a1.5 1.5 0 0 0 3 0V20h2v3.5a1.5 1.5 0 0 0 3 0V20h1a1 1 0 0 0 1-1v-9H2z"/></svg>
@@ -128,23 +128,3 @@ import Layout from '../layouts/Layout.astro';
   </section>
 </Layout>
 
-<!-- Android PWA install handler -->
-<script>
-  let deferredPrompt: any = null;
-
-  window.addEventListener('beforeinstallprompt', (e) => {
-    e.preventDefault();
-    deferredPrompt = e;
-  });
-
-  const androidBtn = document.getElementById('android-install-btn');
-  androidBtn?.addEventListener('click', async (e) => {
-    if (deferredPrompt) {
-      e.preventDefault();
-      deferredPrompt.prompt();
-      const { outcome } = await deferredPrompt.userChoice;
-      deferredPrompt = null;
-    }
-    // If no deferredPrompt, the link navigates to /app/ as fallback
-  });
-</script>
