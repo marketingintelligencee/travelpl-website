@@ -1,0 +1,65 @@
+name: Build Android APK
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'wieruszow-app/src/**'
+      - 'wieruszow-app/android/**'
+      - '.github/workflows/build-apk.yml'
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '20'
+          cache: 'npm'
+          cache-dependency-path: wieruszow-app/package-lock.json
+
+      - name: Setup Java JDK
+        uses: actions/setup-java@v4
+        with:
+          distribution: 'temurin'
+          java-version: '17'
+
+      - name: Setup Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install app dependencies
+        working-directory: wieruszow-app
+        run: npm ci
+
+      - name: Build web app
+        working-directory: wieruszow-app
+        run: npm run build
+
+      - name: Sync Capacitor
+        working-directory: wieruszow-app
+        run: npx cap sync android
+
+      - name: Build APK
+        working-directory: wieruszow-app/android
+        run: chmod +x gradlew && ./gradlew assembleRelease
+
+      - name: Rename APK
+        run: |
+          cp wieruszow-app/android/app/build/outputs/apk/release/app-release-unsigned.apk przewodnik-wieruszow.apk
+
+      - name: Create Release
+        uses: softprops/action-gh-release@v2
+        with:
+          tag_name: apk-latest
+          name: Przewodnik Turystyczny - Android APK
+          body: |
+            Pobierz plik APK i zainstaluj na telefonie z Androidem.
+
+            Aby zainstalować, może być potrzebne włączenie "Instaluj z nieznanych źródeł" w ustawieniach telefonu.
+          files: przewodnik-wieruszow.apk
+          make_latest: true
+          prerelease: false
