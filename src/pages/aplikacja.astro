@@ -8,29 +8,49 @@ import Layout from '../layouts/Layout.astro';
     <div class="max-w-4xl mx-auto px-4 text-center">
       <h1 class="text-3xl md:text-4xl font-bold mb-6">Pobierz Przewodnik Turystyczny</h1>
       <p class="text-lg md:text-xl leading-relaxed text-white/90 max-w-2xl mx-auto">
-        Zainstaluj naszą aplikację mobilną — Twojego osobistego przewodnika po atrakcjach turystycznych!
+        Zainstaluj naszą aplikację mobilną — Twojego osobistego przewodnika po atrakcjach turystycznych powiatu wieruszowskiego!
       </p>
     </div>
   </section>
 
-  <!-- CTA -->
-  <section class="py-16 md:py-24">
+  <!-- Download buttons -->
+  <section class="py-16 md:py-20">
     <div class="max-w-3xl mx-auto px-4">
-      <div class="text-center mb-12">
-        <p class="text-lg leading-relaxed text-dark/80 mb-8">
-          Znajdziesz w niej mapę, opisy miejsc, nawigację i quiz wiedzy o regionie. Aplikacja jest idealnym towarzyszem podróży — zarówno na naszych wycieczkach, jak i na samodzielnych wyprawach.
+
+      <!-- CTA -->
+      <div class="text-center mb-16">
+        <p class="text-lg leading-relaxed text-dark/80 mb-8 max-w-xl mx-auto">
+          Kliknij przycisk poniżej, aby pobrać aplikację na swoje urządzenie.
         </p>
 
-        <a
-          href="/app/"
-          class="inline-flex items-center justify-center gap-3 bg-primary text-white font-bold text-lg px-10 py-5 rounded-xl hover:bg-primary/90 transition-colors min-h-touch shadow-lg"
-        >
-          Otwórz aplikację
-        </a>
+        <!-- Download buttons -->
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+          <div class="flex flex-col items-center gap-2">
+            <a
+              id="android-install-btn"
+              href="/app/"
+              class="inline-flex items-center justify-center gap-3 bg-[#3DDC84] text-white font-bold text-lg px-8 py-5 rounded-xl hover:bg-[#35c475] transition-colors shadow-lg"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.523 2.226l1.392-2.415a.4.4 0 0 0-.146-.541.393.393 0 0 0-.539.15L16.81 1.853A8.592 8.592 0 0 0 12 .8c-1.72 0-3.328.388-4.81 1.053L5.77-.58a.393.393 0 0 0-.539-.15.4.4 0 0 0-.146.541L6.477 2.226C3.885 3.618 2.1 6.093 1.839 9h20.322c-.261-2.907-2.046-5.382-4.638-6.774zM7.5 6.5a1 1 0 1 1 0-2 1 1 0 0 1 0 2zm9 0a1 1 0 1 1 0-2 1 1 0 0 1 0 2zM2 10v9a1 1 0 0 0 1 1h1v3.5a1.5 1.5 0 0 0 3 0V20h2v3.5a1.5 1.5 0 0 0 3 0V20h2v3.5a1.5 1.5 0 0 0 3 0V20h1a1 1 0 0 0 1-1v-9H2z"/></svg>
+              Pobierz na Androida
+            </a>
+          </div>
+          <div class="flex flex-col items-center gap-2">
+            <a
+              href="/app/"
+              class="inline-flex items-center justify-center gap-3 bg-dark text-white font-bold text-lg px-8 py-5 rounded-xl hover:bg-dark/90 transition-colors shadow-lg"
+            >
+              <svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24" fill="currentColor"><path d="M17.05 20.28c-.98.95-2.05.8-3.08.35-1.09-.46-2.09-.48-3.24 0-1.44.62-2.2.44-3.06-.35C2.79 15.25 3.51 7.59 9.05 7.31c1.35.07 2.29.74 3.08.8 1.18-.24 2.31-.93 3.57-.84 1.51.12 2.65.72 3.4 1.8-3.12 1.87-2.38 5.98.48 7.13-.57 1.5-1.31 2.99-2.54 4.09zM12.03 7.25c-.15-2.23 1.66-4.07 3.74-4.25.29 2.58-2.34 4.5-3.74 4.25z"/></svg>
+              Pobierz na iPhone'a
+            </a>
+            <p class="text-sm text-dark/50">Działa tylko w przeglądarce Safari</p>
+          </div>
+        </div>
       </div>
 
       <!-- Install instructions -->
-      <div class="grid md:grid-cols-2 gap-6 mb-12">
+      <h2 class="text-2xl font-bold text-dark text-center mb-8">Instrukcja instalacji</h2>
+      <div class="grid md:grid-cols-2 gap-6 mb-16">
         <!-- Android -->
         <div class="bg-light rounded-2xl p-6 md:p-8">
           <div class="flex items-center gap-3 mb-4">
@@ -40,7 +60,7 @@ import Layout from '../layouts/Layout.astro';
           <ol class="space-y-3 text-dark/80">
             <li class="flex gap-3">
               <span class="flex-shrink-0 w-7 h-7 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
-              <span>Otwórz link <strong>"Otwórz aplikację"</strong> w przeglądarce Chrome</span>
+              <span>Kliknij <strong>"Pobierz na Androida"</strong> powyżej</span>
             </li>
             <li class="flex gap-3">
               <span class="flex-shrink-0 w-7 h-7 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold">2</span>
@@ -63,7 +83,7 @@ import Layout from '../layouts/Layout.astro';
           <ol class="space-y-3 text-dark/80">
             <li class="flex gap-3">
               <span class="flex-shrink-0 w-7 h-7 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold">1</span>
-              <span>Otwórz link <strong>"Otwórz aplikację"</strong> w przeglądarce <strong>Safari</strong></span>
+              <span>Kliknij <strong>"Pobierz na iPhone'a"</strong> — otworzy się w Safari</span>
             </li>
             <li class="flex gap-3">
               <span class="flex-shrink-0 w-7 h-7 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold">2</span>
@@ -71,10 +91,10 @@ import Layout from '../layouts/Layout.astro';
             </li>
             <li class="flex gap-3">
               <span class="flex-shrink-0 w-7 h-7 bg-primary text-white rounded-full flex items-center justify-center text-sm font-bold">3</span>
-              <span>Wybierz <strong>"Dodaj do ekranu początkowego"</strong></span>
+              <span><strong>Przewiń listę w dół</strong> i wybierz <strong>"Dodaj do ekranu początkowego"</strong></span>
             </li>
           </ol>
-          <p class="text-sm text-dark/50 mt-4">Ważne: na iPhone działa tylko przez Safari, nie Chrome.</p>
+          <p class="text-sm text-dark/50 mt-4">Opcja jest niżej na liście — trzeba przewinąć! Działa tylko w Safari.</p>
         </div>
       </div>
 
@@ -107,3 +127,24 @@ import Layout from '../layouts/Layout.astro';
     </div>
   </section>
 </Layout>
+
+<!-- Android PWA install handler -->
+<script>
+  let deferredPrompt: any = null;
+
+  window.addEventListener('beforeinstallprompt', (e) => {
+    e.preventDefault();
+    deferredPrompt = e;
+  });
+
+  const androidBtn = document.getElementById('android-install-btn');
+  androidBtn?.addEventListener('click', async (e) => {
+    if (deferredPrompt) {
+      e.preventDefault();
+      deferredPrompt.prompt();
+      const { outcome } = await deferredPrompt.userChoice;
+      deferredPrompt = null;
+    }
+    // If no deferredPrompt, the link navigates to /app/ as fallback
+  });
+</script>
