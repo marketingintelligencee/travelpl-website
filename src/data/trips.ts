@@ -90,7 +90,6 @@ export const trips: Trip[] = [
     highlights: ['Strefa SPA bez limitu', 'Basen, jacuzzi, sauna', 'Bufet szwedzki', 'Soki bez limitu'],
     badge: 'Już wkrótce!',
     urgencyBadge: 'Ostatnie miejsca!',
-    featured: true,
   },
   {
     slug: 'rewal-czerwiec',
@@ -119,6 +118,7 @@ export const trips: Trip[] = [
       'Wycieczki fakultatywne',
     ],
     highlights: ['Strefa SPA bez limitu', 'Basen, jacuzzi, sauna', 'Bufet szwedzki', 'Soki bez limitu'],
+    urgencyBadge: 'Ostatnie miejsca!',
     featured: true,
   },
   {
@@ -133,10 +133,10 @@ export const trips: Trip[] = [
     image: '/images/trips/leba.jpg',
     beachDistance: '450m od plaży',
     shortDescription: 'Nowy obiekt noclegowy! Pełne wyżywienie — 3 posiłki dziennie + prowiant na drogę powrotną.',
-    fullDescription: 'Nowy obiekt noclegowy! Pokoje z prywatną łazienką, TV, WiFi i sprzętem plażowym w cenie. Pełne wyżywienie — śniadania, obiady i kolacje przez cały pobyt + prowiant na drogę powrotną.',
+    fullDescription: 'Nowy obiekt noclegowy! Pokoje z prywatną łazienką, TV, WiFi. Pełne wyżywienie — śniadania, obiady i kolacje przez cały pobyt + prowiant na drogę powrotną.',
     included: [
       'Przejazd klimatyzowanym autokarem',
-      'Zakwaterowanie w pokojach z prywatną łazienką (TV, Wi-Fi, lodówka, czajnik, ręczniki, sprzęt plażowy)',
+      'Zakwaterowanie w pokojach z prywatną łazienką (TV, Wi-Fi, lodówka, czajnik, ręczniki)',
       'Pełne wyżywienie: 7x śniadanie + 7x obiad + 7x kolacja',
       '1x prowiant na drogę powrotną',
       'Ubezpieczenie NNW',
@@ -146,7 +146,7 @@ export const trips: Trip[] = [
       'Dopłata do pokoju 1-osobowego',
       'Wycieczki fakultatywne',
     ],
-    highlights: ['Nowy obiekt', 'Pełne wyżywienie (3 posiłki)', 'Sprzęt plażowy w cenie', 'Prowiant na drogę'],
+    highlights: ['Nowy obiekt', 'Pełne wyżywienie (3 posiłki)', 'Prowiant na drogę'],
     badge: 'Nowy obiekt!',
   },
   {
@@ -202,11 +202,11 @@ export const trips: Trip[] = [
     price: 2100,
     image: '/images/trips/mrzezyno.jpg',
     beachDistance: '550m od plaży',
-    shortDescription: 'Wypoczynek nad morzem w kameralnym kurorcie. Pokoje z pełnym wyposażeniem i sprzętem plażowym w cenie.',
-    fullDescription: 'Wypoczynek nad morzem w kameralnym kurorcie. Mrzeżyno to spokojna miejscowość z piękną plażą i bliskością natury. Pokoje z prywatną łazienką, TV, WiFi i sprzętem plażowym w cenie.',
+    shortDescription: 'Wypoczynek nad morzem w kameralnym kurorcie. Pokoje z pełnym wyposażeniem.',
+    fullDescription: 'Wypoczynek nad morzem w kameralnym kurorcie. Mrzeżyno to spokojna miejscowość z piękną plażą i bliskością natury. Pokoje z prywatną łazienką, TV, WiFi.',
     included: [
       'Przejazd klimatyzowanym autokarem',
-      'Zakwaterowanie w pokojach z prywatną łazienką (TV, Wi-Fi, lodówka, czajnik, ręczniki, sprzęt plażowy)',
+      'Zakwaterowanie w pokojach z prywatną łazienką (TV, Wi-Fi, lodówka, czajnik, ręczniki)',
       '7x śniadanie (stół szwedzki)',
       '7x obiadokolacja',
       'Ubezpieczenie NNW',
@@ -216,7 +216,9 @@ export const trips: Trip[] = [
       'Dopłata do pokoju 1-osobowego',
       'Wycieczki fakultatywne',
     ],
-    highlights: ['Kameralny kurort', 'Piękna plaża', 'Stół szwedzki', 'Sprzęt plażowy w cenie'],
+    highlights: ['Kameralny kurort', 'Piękna plaża', 'Stół szwedzki'],
+    urgencyBadge: 'Ostatnie miejsca!',
+    featured: true,
   },
   {
     slug: 'mielno',
@@ -377,6 +379,7 @@ export const trips: Trip[] = [
       'Opłata klimatyczna',
     ],
     notIncluded: [
+      'Bilety wstępu do zwiedzanych miejsc (ok. 90 zł)',
       'Wieczorek integracyjny z muzyką + degustacja win (opcja za dopłatą)',
     ],
     highlights: ['Zapora Solińska — najwyższa tama w Polsce', 'Cerkiew UNESCO w Smolniku', 'Rejs po Zalewie Solińskim', 'Skansen w Sanoku — 180 drewnianych budowli', 'Strefa SPA bez limitu'],
