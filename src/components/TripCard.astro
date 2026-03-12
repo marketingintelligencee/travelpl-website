@@ -10,10 +10,10 @@ const { trip } = Astro.props;
 const formattedPrice = new Intl.NumberFormat('pl-PL').format(trip.price);
 
 const regionColors: Record<string, string> = {
-  morze: 'bg-primary/10 text-primary',
-  gory: 'bg-success/10 text-success',
-  miasto: 'bg-accent/10 text-accent',
-  zagranica: 'bg-amber-100 text-amber-700',
+  morze: 'bg-primary text-white',
+  gory: 'bg-success text-white',
+  miasto: 'bg-accent text-white',
+  zagranica: 'bg-amber-600 text-white',
 };
 
 const regionLabels: Record<string, string> = {
